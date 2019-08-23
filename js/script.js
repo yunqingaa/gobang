@@ -5,6 +5,8 @@ var chessBoard = [];
 var myWin = [];
 var computerWin = [];
 var over = false;
+var reset=document.getElementById('reset');
+var back =document.getElementById('back');
 
 //棋盘
 context.strokeStyle = '#bfbfbf';
@@ -16,6 +18,7 @@ for (var i = 0; i < 15; i++) {
     context.lineTo(435, 15 + i * 30);
     context.stroke();
 }
+
 window.onload = function () {
     //棋子
     var oneStep = function (i, j, me) {
@@ -58,10 +61,8 @@ window.onload = function () {
             chessBoard[i][j] = 1;//我已占位置
             console.log('black'+chessBoard[i][j])
         }else if(chessBoard[i][j] == 1){
-            console.log('已下黑棋')
             return
         }else if(chessBoard[i][j] == 2){
-            console.log('已下白棋')
             return
         }
 
@@ -214,5 +215,8 @@ window.onload = function () {
         if (!over) {
             me = !me;
         }
+    }
+    reset.onclick=function(){
+        location.reload();
     }
 }
