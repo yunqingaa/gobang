@@ -39,6 +39,7 @@ window.onload = function () {
         chessBoard[i] = [];
         for (var j = 0; j < 15; j++) {
             chessBoard[i][j] = 0;
+            // console.log(chessBoard[i][j])
         }
     }
     chess.onclick = function (e) {
@@ -55,6 +56,13 @@ window.onload = function () {
         if (chessBoard[i][j] == 0) {
             oneStep(i, j, me);
             chessBoard[i][j] = 1;//我已占位置
+            console.log('black'+chessBoard[i][j])
+        }else if(chessBoard[i][j] == 1){
+            console.log('已下黑棋')
+            return
+        }else if(chessBoard[i][j] == 2){
+            console.log('已下白棋')
+            return
         }
 
         for (var k = 0; k < count; k++) {
@@ -190,6 +198,7 @@ window.onload = function () {
                 }
             }
         }
+        
         oneStep(u, v, false);
         chessBoard[u][v] = 2; //计算机占据位置
         for (var k = 0; k < count; k++) {
