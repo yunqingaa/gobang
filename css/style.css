@@ -3,3 +3,24 @@ canvas {
     margin: 50px auto;
     box-shadow: -2px -2px 2px #efefef,5px 5px 5px #b9b9b9;
 }
+#reset{
+    border: 1px solid rgb(10, 10, 10);
+    display: inline-block;
+    width: 65px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+#back{
+    border: 1px solid rgb(10, 10, 10);
+    display: inline-block;
+    width: 55px;
+    height: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.button{
+    height: 30px;
+    width: 160px;
+    margin: auto;
+}
